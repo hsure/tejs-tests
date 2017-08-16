@@ -1,7 +1,10 @@
 function modulo(num1, num2) {
   var remainder;
-   if(num1 > num2 && num2 > 0){
-    remainder = num1 - num2;
+
+  remainder = num1;
+
+   while(remainder > num2 && num2 > 0){
+    remainder = remainder - num2;
     modulo(remainder,num2);
    }
    return remainder;
